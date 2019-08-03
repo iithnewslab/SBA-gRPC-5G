@@ -1,0 +1,117 @@
+# TODO
+
+Releases:
+- Curently developing version: 0.1
+- Next version: 0.2
+- ...
+
+
+### General
+
++ Add error message provided in response body into an exception throw
++ run integration tests manually
++ Encode URL (don't encode special characters)
++ Consistency modes
++ Blocking queries (simple)
++ Don't expose json11 in headers
++ Add CMake 3 support
++ build library as shared (default) or static (choosen by option)
+- Suppress all warnings. Possibly enable -Werror
+- Add async API (cURL multi handle?) (postponed to 0.2)
+- More checks of received JSON data shape (?)
+- Simplify JSON interface (?)
+- Don't use regex for CURL headers (it creates dependency on Boost.Regex compiled library on gcc 4.8)
+- provide comparision operators (at least ==, !=) for all structs defined (postponed to 0.2)
+- Support 64bit integers in JSON (postponed to 0.2)
+- tests for consistency / default consistency (if possible)
+- pkg-config: add Libs.private and Requires
+
+### HTTP(S)
+? allow user to set CURLOPT_SSLENGINE and CURLOPT_SSLENGINE_DEFAULT (consul 0.2)
+? allow user to set CURLOPT_SSL_CIPHER_LIST
+    or set it by ourself to something highly secure (check what Consul supports) (consul 0.2)
+? allow user to set CURLOPT_ISSUERCERT (consul 0.2)
+? allow user to set CURLOPT_PINNEDPUBLICKEY (consul 0.2)
+? allow user to set CURLOPT_CRLFILE (consul 0.2)
+? allow user to set some other HTTP(S) options supported by cURL
+? use Consul::setOption() instead of adding all of this to TlsOptions?
+
+### CI
+
++ build for 3 platforms (Windows, Linux, OSX)
++ run unit-tests
++ run integration tests (+Windows, +Linux , +OSX)
++ operator << for std::duration for tests
++ split consul tests into different executables
+
+### Consul
++ Change 'block-for' resolution from seconds to milliseconds
+- tests for default DC and default token (postponed to 0.2)
+
+
+### kv
+
++ v1 interface except acquire/release lock and consistency modes
++ Decode value from base64
++ Integration tests
++ URL encode keys (key may contain any char from 0 to 255)
++ ensure value can contain any char from 0 to 255
++ Consistency modes
++ Blocking queries (simple)
+- Acquire/release lock (depends on session)
+- Get flag as uin64_t. Now it extracted from JSON as double because of json11 limitations - switch to RapidJSON
+
+- throwing `std::string get(key, params...)` i.e. w/o a default value
+- `boost::optional<std::string> getOptional(key, params...)`
+- lazy items iterator
+- ? syntax sugar operator[] to simply get/put value w/o params. getter returns "" if key does not exist (postponed to 0.2?)
+- tests for dc (postponed to 0.2)
+- tests for default DC and default token (postponed to 0.2)
+- typed value access (postponed to 0.2)
+
+
+### agent
+
++ v1 interface except Config part of /v1/agent/self
++ Additional check types (https://www.consul.io/docs/agent/checks.html)
+  + HTTP
+  + TCP
+  + Docker
++ Support "Notes" for a service's check
+- Support multiple checks for a service
+- Support "Status" (plus "Output"?) for a check's initial status
+- agent/maintenance (https://www.consul.io/docs/agent/http/agent.html#agent_maintenance)
+- agent/service/maintenance (https://www.consul.io/docs/agent/http/agent.html#agent_service_maintenance)
+
+- Config part of /v1/agent/self (postponed to 0.2)
+
+
+### catalog
+
++ v1 interface except register/deregister
++ tests
++ tests for block_for
+
+- tests for dc (postponed to 0.2)
+- tests for default DC (postponed to 0.2)
+- register/deregister (no reason to implement)
+
+
+### health
+
++ v1 interface except register/deregister
+- tests
+- tests for block_for
+
+- tests for dc (postponed to 0.2)
+- tests for default DC (postponed to 0.2)
+
+
+### session
+
+### event
+
+### status
+
+### acl
+

@@ -1,0 +1,16 @@
+global:
+  scrape_interval:     1s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
+
+scrape_configs:
+
+  - job_name: 'cadvisor'
+    static_configs:
+    - targets: ['localhost:8080']
+
+  - job_name: 'server'
+    static_configs:
+    - targets: ['localhost:10001', 'localhost:10002', 'localhost:10003','localhost:10004', 'localhost:10005']
+
+  - job_name: 'client'
+    static_configs:
+    - targets: ['localhost:12000']
