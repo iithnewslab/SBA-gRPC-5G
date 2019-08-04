@@ -1,7 +1,7 @@
 # 5G-Core-gRPC-SBA
 
 The 5G core modules code is in the [src](src) folder.  
-The loadbalancer code is in the [grpclb](grpclb) folder.
+The loadbalancer code is in the [grpclb](src/grpclb) folder.
 
 ## How to run 5G modules
 
