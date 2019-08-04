@@ -30,6 +30,13 @@ docker run -ti -d --rm --name upf --cap-add NET_ADMIN --network vepc -v ~/ngcode
 docker run -ti -d --rm --name sink --cap-add NET_ADMIN --network vepc -v ~/ngcode/:/code btvk/sba-vnf /bin/bash
 ```
 
+### Start Consul Server for NRF
+
+Download Consul pre-compiled binaries from [here](https://www.consul.io/docs/install/index.html). From host machine get the IP address of your interface and add this value in [ADD LINK](ADD LINK).
+```
+consul agent -server -bootstrap -bind=<Interface-IP-Address> -client=<Interface-IP-Address> -ui -data-dir=/tmp/consul -node=consul-node
+```
+
 ### Start the 5G Network Function modules
 
 > Check your docker subnet for network vepc.
@@ -94,3 +101,6 @@ make ransim.out
 # first 10 denotes the num_of_ue_threads at RAN
 # second 10 denotes the time duration of each UE thread
 ```
+
+To disable logging, set the DEBUG macro present in [utils.h](https://github.com/iithnewslab/SBA-gRPC-5G/blob/master/src/utils.h) to 0.
+
