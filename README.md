@@ -32,7 +32,7 @@ docker run -ti -d --rm --name sink --cap-add NET_ADMIN --network vepc -v ~/ngcod
 
 ### Start Consul Server for NRF
 
-Download Consul pre-compiled binaries from [here](https://www.consul.io/docs/install/index.html). From host machine get the IP address of your interface and add this value in [ADD LINK](ADD LINK).
+Download Consul pre-compiled binaries from [here](https://www.consul.io/docs/install/index.html). From host machine get the IP address of your interface on which Consul is bound and update the [code](https://github.com/iithnewslab/SBA-gRPC-5G/search?q=192.168.136.88&unscoped_q=192.168.136.88) with this IP address value. Run the following command in the host machine to start consul server.
 ```
 consul agent -server -bootstrap -bind=<Interface-IP-Address> -client=<Interface-IP-Address> -ui -data-dir=/tmp/consul -node=consul-node
 ```
