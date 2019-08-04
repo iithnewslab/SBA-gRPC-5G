@@ -6,9 +6,9 @@
 
 #pragma once
 
-#include "../ppconsul/consul.h"
-#include "../ppconsul/helpers.h"
-#include "../ppconsul/types.h"
+#include "ppconsul/consul.h"
+#include "ppconsul/helpers.h"
+#include "ppconsul/types.h"
 #include <boost/optional.hpp>
 
 namespace ppconsul { namespace status {

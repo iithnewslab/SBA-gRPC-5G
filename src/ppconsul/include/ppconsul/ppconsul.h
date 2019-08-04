@@ -10,8 +10,8 @@
 
 #include "ppconsul/config.h"
 
-#include "../ppconsul/consul.h"
-#include "../ppconsul/kv.h"
-#include "../ppconsul/agent.h"
-#include "../ppconsul/catalog.h"
-#include "../ppconsul/status.h"
+#include "ppconsul/consul.h"
+#include "ppconsul/kv.h"
+#include "ppconsul/agent.h"
+#include "ppconsul/catalog.h"
+#include "ppconsul/status.h"
