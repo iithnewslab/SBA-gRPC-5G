@@ -1,7 +1,7 @@
 # 5G-Core-gRPC-SBA
 
 The 5G core modules code is in the [src](src) folder.  
-The loadbalancer code is in the [grpclb](grpclb) folder.
+The loadbalancer code is in the [grpclb](src/grpclb) folder.
 
 ## How to run 5G modules
 
@@ -9,7 +9,7 @@ The loadbalancer code is in the [grpclb](grpclb) folder.
 ### Create Docker containers
 
 ```
-git clone https://github.com/sipian/5G-Core-gRPC-SBA.git ~/ngcode
+git clone https://github.com/iithnewslab/SBA-gRPC-5G.git ~/ngcode
 
 docker network create vepc
 
