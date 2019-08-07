@@ -1,3 +1,9 @@
+/* SPDX-License-Identifier: Apache-2.0
+ * Copyright(c) 2019 Networked Wireless Systems Lab (NeWS Lab), IIT Hyderabad, India
+ */
+
+
+
 #include "smf.h"
 
 #include <curl/curl.h>

@@ -1,3 +1,8 @@
+/* SPDX-License-Identifier: Apache-2.0
+ * Copyright(c) 2019 Networked Wireless Systems Lab (NeWS Lab), IIT Hyderabad, India
+ */
+
+
 #ifndef UPF_SERVER_H
 #define UPF_SERVER_H
 
