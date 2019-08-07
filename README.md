@@ -1,6 +1,6 @@
 # 5G-Core-gRPC-SBA
 
-This repository is the proof of concept for Service Based Architecture of 5G using gRPC. This work is published with the title **Prototyping and Load Balancing the Service Based Architecture of 5G Core using NFV**  in the 5th proceedings of IEEE Network Softwarization (NetSoft) 2019.  The paper can be accessed [here](AuthorCopySBA5G.pdf) with the presentation at this [link](Presentation_Netsoft19_gRPC_5G.pdf). 
+This repository is the proof of concept for Service Based Architecture of 5G using gRPC. This work is published with the title **Prototyping and Load Balancing the Service Based Architecture of 5G Core using NFV**  in the 5th proceedings of IEEE Network Softwarization (NetSoft) 2019.  The paper can be accessed [here](AuthorCopySBA5G.pdf) with the presentation at this [link](Presentation_Netsoft19_gRPC_5G.pdf). The Code in this repository is based on [NFV-LTE-EPC](https://github.com/networkedsystemsIITB/NFV_LTE_EPC) developed by Networked Systems Lab, IIT Bombay under Prof. Mythili Vutukuru.
 
 
 
