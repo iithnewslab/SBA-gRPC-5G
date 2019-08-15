@@ -7,6 +7,9 @@ This repository is the proof of concept for Service Based Architecture of 5G usi
 The 5G core modules code is in the [src](src) folder.  
 The loadbalancer code is in the [grpclb](src/grpclb) folder.
 
+> **Please cite the appropriate paper if you use this code.**
+
+
 ## How to run 5G modules
 
 
